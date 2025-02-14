@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гра Змійка</title>
+    <link rel="stylesheet" href="./style.css"> <!-- Підключення зовнішнього стилю -->
+</head>
+<body>
+    <h1>Гра Змійка</h1>
+
+    <div class="score-board">
+        <div id="score">Рахунок: 0</div>
+        <div id="lives">Життя: 3</div>
+        <div id="points">Очки: 0</div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Контейнер для кнопок керування стрілками -->
+    <div class="controls-arrows">
+        <button onclick="directionControl('UP')" class="arrow-btn">▲</button>
+        <div class="arrow-row">
+            <button onclick="directionControl('LEFT')" class="arrow-btn">◀</button>
+            <button onclick="directionControl('DOWN')" class="arrow-btn">▼</button>
+            <button onclick="directionControl('RIGHT')" class="arrow-btn">▶</button>
+        </div>
+    </div>
+
+    <!-- Магазин -->
+    <h2>Магазин</h2>
+    <div class="controls">
+        <button onclick="buySkin('lime')" class="shop-item">Купити зелений 🟩</button>
+        <button onclick="buySkin('red')" class="shop-item">Купити червоний 🟥</button>
+        <button onclick="buySkin('yellow')" class="shop-item">Купити жовтий 🟨</button>
+        <button onclick="buyRainbowSnake()" class="shop-item">Купити різнокольорову змійку 🌈 (50 очок)</button>
+        <button onclick="buyBonus()" class="shop-item">Купити бонус ⭐️(+5 очок) (15 очок)</button>
+        <button onclick="buyLife()" class="shop-item">Купити додаткове життя ❤️ (20 очок) <br> Купляти виключно під час гри</button>
+        <button id="restartBtn" style="display:none;" class="restart-btn">Почати заново 🔄</button>
+    </div>
+
+    <!-- Повзунок для регулювання швидкості -->
+    <div class="speed-control">
+        <label for="speedSlider">Швидкість гри:</label>
+        <input type="range" id="speedSlider" min="50" max="300" value="200" step="10">
+        <span id="speedValue">200</span>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

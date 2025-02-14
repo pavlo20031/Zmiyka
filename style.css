@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: black; /* Чорний фон для всього тіла */
+    color: white; /* Білий текст */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Стилі для заголовка */
+h1 {
+    color: white;
+}
+
+/* Розташування інформації про гру */
+.score-board {
+    display: flex;
+    justify-content: space-between; /* Розміщення по краях */
+    padding: 0 20px; /* Відступи з боків */
+    margin-bottom: 20px;
+}
+
+/* Колір і стиль для рахунку, життів і очок */
+#score {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff5733; /* Помаранчевий */
+}
+
+#lives {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d50000; /* Червоний */
+}
+
+#points {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2e7d32; /* Зелений */
+}
+
+/* Полотно для гри */
+canvas {
+    background-color: black; /* Чорний фон для канваса */
+    display: block;
+    margin: 0 auto;
+    border: 4px solid white; /* Біла обводка канваса для видимості */
+    box-shadow: 0 0 10px white; /* Легке сяйво навколо канваса */
+}
+
+/* Кнопки керування стрілками */
+.arrow-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.arrow-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.arrow-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #00acc1; /* Блакитний */
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.arrow-btn:hover {
+    background-color: #00838f;
+}
+
+/* Магазин */
+h2 {
+    color: white;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+/* Стилі для кнопок магазину */
+button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#restartBtn {
+    background-color: #ff9800; /* Оранжевий */
+    color: white;
+}
